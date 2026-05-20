@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Bakery theme - warm, inviting colors */
+    --background: 40 50% 98%;
+    --foreground: 25 35% 20%;
+
+    --card: 40 40% 99%;
+    --card-foreground: 25 35% 20%;
+
+    --popover: 40 40% 99%;
+    --popover-foreground: 25 35% 20%;
+
+    /* Primary: Rich chocolate brown */
+    --primary: 25 40% 35%;
+    --primary-foreground: 40 50% 98%;
+
+    /* Secondary: Warm cream */
+    --secondary: 40 45% 92%;
+    --secondary-foreground: 25 35% 25%;
+
+    /* Muted: Soft beige */
+    --muted: 40 30% 90%;
+    --muted-foreground: 25 20% 45%;
+
+    /* Accent: Golden amber */
+    --accent: 35 60% 65%;
+    --accent-foreground: 25 35% 20%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 40 50% 98%;
+
+    --border: 40 25% 85%;
+    --input: 40 25% 88%;
+    --ring: 35 60% 65%;
+
+    --radius: 0.75rem;
+
+    /* Custom bakery tokens */
+    --bakery-chocolate: 25 45% 30%;
+    --bakery-cream: 40 50% 95%;
+    --bakery-golden: 35 65% 60%;
+    --bakery-warm: 30 50% 85%;
+    
+    /* Gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(35 60% 70%), hsl(25 50% 50%));
+    --gradient-subtle: linear-gradient(180deg, hsl(40 50% 98%), hsl(40 40% 95%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(25 40% 35% / 0.1);
+    --shadow-glow: 0 0 30px hsl(35 60% 65% / 0.2);
+  }
+
+  .dark {
+    --background: 25 25% 12%;
+    --foreground: 40 50% 95%;
+
+    --card: 25 25% 15%;
+    --card-foreground: 40 50% 95%;
+
+    --popover: 25 25% 15%;
+    --popover-foreground: 40 50% 95%;
+
+    --primary: 35 60% 65%;
+    --primary-foreground: 25 35% 15%;
+
+    --secondary: 25 20% 25%;
+    --secondary-foreground: 40 50% 95%;
+
+    --muted: 25 20% 22%;
+    --muted-foreground: 40 30% 65%;
+
+    --accent: 35 60% 55%;
+    --accent-foreground: 40 50% 98%;
+
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 40 50% 98%;
+
+    --border: 25 20% 25%;
+    --input: 25 20% 25%;
+    --ring: 35 60% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
